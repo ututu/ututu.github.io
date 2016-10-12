@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plax.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <style media="screen">
+    div {
+      position: relative;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2e2e2+0,d1d1d1+37,d1d1d1+37,dbdbdb+50,fefefe+100 */
+background: #e2e2e2; /* Old browsers */
+background: -moz-linear-gradient(top,  #e2e2e2 0%, #d1d1d1 37%, #d1d1d1 37%, #dbdbdb 50%, #fefefe 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e2e2e2 0%,#d1d1d1 37%,#d1d1d1 37%,#dbdbdb 50%,#fefefe 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e2e2e2 0%,#d1d1d1 37%,#d1d1d1 37%,#dbdbdb 50%,#fefefe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+
+      background-size: cover;
+      overflow: hidden;
+    }
+    #bg {
+      position: absolute;
+      top: -5vh;
+      left: -10vw;
+      height: 120vh;
+      width: 120vw;
+      overflow: hidden;
+      z-index: 1;
+
+    }
+    #pickle {
+      position: absolute;
+      left: 20vw;
+      top: 15vh;
+      height: 80vh;
+      width: 50vw;
+      z-index: 3;
+    }
+    #hunter1 {
+      position: absolute;
+      top: 70vh;
+      left: 85vw;
+      height: 20vh;
+      width: 10vw;
+      z-index: -1;
+    }
+    #chargeblade {
+      position: absolute;
+      top: 50vh !important;
+      left: 15vw !important;
+      height: 50vh;
+      width: 20vw;
+      z-index: 5;
+    }
+    #insectglaive {
+      position: absolute;
+      top: 30vh;
+      left: 70vw;
+      height: 30vh;
+      width: 20vw;
+      z-index: 4;
+    }
+    #hunter4 {
+      position: absolute;
+      top: 65vh !important;
+      left: 0vw !important;
+      height: 30vh;
+      width: 10vw;
+      z-index: 2;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="#myPlaxDiv">
+      <img id="bg" src="http://vignette1.wikia.nocookie.net/monsterhunter/images/c/c1/MH4U-World_Map.png/revision/latest?cb=20150413175740" alt="" />
+      <img id="pickle" src="http://vignette3.wikia.nocookie.net/monsterhunter/images/1/18/MH4-Deviljho_Render_001.png/revision/latest?cb=20140106020315" alt="" />
+      <img id="chargeblade" src="http://www.zombiegameronline.com/wp-content/uploads/2014/10/Charge_Blade_Small-1.png" alt="" />
+      <img id="insectglaive" src="http://vignette2.wikia.nocookie.net/monsterhunter/images/4/49/Insect_Staff_3D_render.png/revision/latest?cb=20130802142723" alt="" />
+
+    </div>
+    <script>
+      function enablePlax(){
+        //Enable parallax for elements
+        $('#bg').plaxify({"xRange":10,"yRange":10, "invert": false});
+        $('#pickle').plaxify({"xRange":20,"yRange":10, "invert": false});
+        $('#chargeblade').plaxify({"xRange":80,"yRange":30});
+        $('#insectglaive').plaxify({"xRange":50,"yRange":30, "invert": true});
+        $.plax.enable();
+      };
+      function disablePlax(){
+        //Disable parallax and clean all the parallax styles
+        $.plax.disable({"clearLayers":true});
+        $('#bg[style]').removeAttr('style')
+        $('#pickle[style]').removeAttr('style')
+        $('#chargeblade[style]').removeAttr('style')
+        $('#insectglaive[style]').removeAttr('style')
+      }
+      $(document).ready(function() {
+        enablePlax();
+        $( window ).resize(function() {
+          disablePlax();
+          enablePlax();
+        });
+      });
+    </script>
+  </body>
+</html>
