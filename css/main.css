@@ -14,10 +14,6 @@ body {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
 }
-figure {
-  margin: 0;
-  text-align: left;
-}
 section {
   text-align: center;
 }
@@ -27,33 +23,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   font-weight: 300; }
 
-  h1 { font-size: 3.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-  h2 { font-size: 2.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-  h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-  h4 { font-size: 1.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-  h5 { font-size: 0.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-  h6 { font-size: 0.5rem; line-height: 1.6;  letter-spacing: 0; }
-
-/* LAYOUT */
-.grid {
-  width: 100%;
-}
-.grid::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+h1 { font-size: 3.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 2.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 1.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 0.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 0.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin: 0;
 }
-/* LINKS */
+
 a {
   font-size: 1.5rem;
   color: #848484;
   text-decoration: none;
+  border: none;
 }
-/* CONTAINER */
+/*CLASSES*/
 .container {
   position: relative;
   width: 100%;
@@ -62,140 +49,107 @@ a {
   padding: 0;
   box-sizing: border-box;
 }
-/* HEADER NAVIGATION */
-.header {
-  padding: 1.5rem;
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 
-}
-.header h1 {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-nav ul {
+.horizontal-list {
   list-style: none;
   margin: 1rem auto 0 auto;
   padding: 0;
-  text-align: center;
 }
-
-nav ul li {
+.horizontal-list li {
   display: inline-block;
-  text-transform: uppercase;
   margin-right: 1rem;
+  vertical-align: middle;
 }
-nav ul li:last-child {
+.horizontal-list li:last-child {
   margin-right: 0;
 }
-nav ul li a {
-  border: none;
-  color: gray;
-  text-decoration: none;
+
+.center-text {
+  text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.bottom-border {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.email-link {
+  margin-top: 1rem;
+}
+/* HEADER NAVIGATION */
+#header {
+  padding: 1.5rem;
+}
+#header h1 {
+  margin-bottom: 0;
 }
 
-/* ABOUT */
+/* ABOUT*/
 section {
   padding: 1.5rem;
 }
 
-img.face {
+#about img {
   border-radius: 100%;
   width: 60%;
   margin: 4rem auto;
   display: block;
 }
-.about {
-  text-align: center;
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-}
-.about p {
-  text-align: center;
-}
-.about ul {
-  display: inline-block;
-  list-style: none;
-  margin: 1rem auto 0 auto;
-  padding: 0;
-}
-.about ul li {
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: 2rem;
-}
-.about ul li:last-child {
-  margin-right: 0;
-}
 
 /* PROJECTS */
-.projects {
-}
-.projects header{
-  text-align: center;
-}
-.projects figure {
-  margin-bottom: 2rem;
-}
-figure::after {
-  display: block;
-  content: "";
-  clear: both;
+#projects figure {
+  margin: 0 0 2rem 0;
+  text-align: left;
 }
 
-.projects figure a img {
+
+
+#projects figure a img {
   width: 50%;
   margin-right: 1rem;
   float: left;
 }
-.projects figure figcaption {
+#projects figure figcaption {
   display: block;
 }
-.projects figure figcaption h3 {
+#projects figure figcaption h3 {
   margin-bottom: 1rem;
 }
 
 /* FOOTER */
-footer {
+#footer {
   padding: 2rem 0;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
   background-color: #000;
-  text-align: center;
 }
-footer section header h2 {
+#footer section header h2 {
   margin-bottom: 1rem;
   color: #fff;
 }
-footer section header p {
+#footer section header p {
   color: #848484;
 }
-address{
+#footer address{
   margin-top: 1rem;
   text-align: center;
 }
-address a{
+#footer address a{
   display: block;
 }
-footer ul {
-  display: inline-block;
-  list-style: none;
+#footer .horizontal-list {
   margin: 1rem auto;
-  padding: 0;
-  font-size: 3rem;
 }
-footer ul li {
-  vertical-align: middle;
-  display: inline-block;
+#footer .horizontal-list li {
   margin-right: 2rem;
 }
-footer ul li:last-child {
+#footer .horizontal-list li:last-child {
   margin-right: 0;
 }
-footer i {
-  font-size: 2.5rem !important;
-}
-.email-link {
-  margin-top: 1rem;
-}
-.white {
-  color: white;
+#footer .horizontal-list i {
+  font-size: 2.5rem;
 }
