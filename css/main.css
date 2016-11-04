@@ -159,10 +159,8 @@ a {
     padding: 0; }
 }
 
-@media (min-width: 34.375rem) {
-  .container {
-    width: 80%;
-  }
+@media (min-width: 46rem) {
+
   /*HEADINGS TYPOGRAPHY*/
   h1 { font-size: 4.0rem;}
   h2 { font-size: 3.6rem;}
@@ -172,9 +170,48 @@ a {
   h6 { font-size: 1.5rem;}
   p,a { font-size: 2rem;}
 
+
+  /*CLASSES*/
+  .container {
+    width: 80%;
+  }
   .horizontal-list li {
     margin-right: 2rem;
   }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #848484;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
   /*HEADER*/
   #header {
     padding: 2.5rem 0;
@@ -192,13 +229,12 @@ a {
   }
   #projects figure {
     width: 50%;
-    float: left;
   }
   #projects figure:nth-child(odd) {
-    padding-left: 1rem;
+    padding-right: 1rem;
   }
   #projects figure:nth-child(even) {
-    padding-right: 1rem;
+    padding-left: 1rem;
   }
   #projects figure:last-child {
     float:none;
@@ -216,4 +252,33 @@ a {
   #footer .horizontal-list li {
     margin-right: 3rem;
   }
+}
+
+@media (min-width: 60rem) {
+  /*ABOUT*/
+  #about img {
+    width: 30%;
+  }
+  /*PROJECTS*/
+  .grid {
+    justify-content: center;
+  }
+  #projects figure {
+    width: 30.6666666667%;
+    margin-bottom: 3rem;
+    padding: 1rem;
+  }
+  #projects figure:last-child {
+    margin: 0;
+  }
+}
+@media (min-width: 75rem) {
+  /*HEADINGS*/
+  h1 { font-size: 4.5rem;}
+  h2 { font-size: 4.1rem;}
+  h3 { font-size: 3.5rem;}
+  h4 { font-size: 2.9rem;}
+  h5 { font-size: 2.3rem;}
+  h6 { font-size: 2.0rem;}
+  p,a { font-size: 2.5rem;}
 }
