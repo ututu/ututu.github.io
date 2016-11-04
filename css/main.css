@@ -14,10 +14,7 @@ body {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
 }
-section {
-  text-align: center;
-}
-/* HEADINGS */
+/* HEADINGS TYPOGRAPHY*/
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -47,7 +44,6 @@ a {
   max-width: 960px;
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .horizontal-list {
@@ -90,10 +86,9 @@ a {
 }
 
 /* ABOUT*/
-section {
+#about {
   padding: 1.5rem;
 }
-
 #about img {
   border-radius: 100%;
   width: 60%;
@@ -102,6 +97,9 @@ section {
 }
 
 /* PROJECTS */
+#projects {
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
 #projects figure {
   margin: 0 0 2rem 0;
   text-align: left;
@@ -123,26 +121,26 @@ section {
 
 /* FOOTER */
 #footer {
-  padding: 2rem 0;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
   background-color: #000;
 }
-#footer section header h2 {
+#footer h2 {
   margin-bottom: 1rem;
   color: #fff;
 }
-#footer section header p {
+#footer p {
   color: #848484;
 }
 #footer address{
-  margin-top: 1rem;
+  margin: 1rem auto;
   text-align: center;
 }
 #footer address a{
   display: block;
 }
 #footer .horizontal-list {
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 #footer .horizontal-list li {
   margin-right: 2rem;
